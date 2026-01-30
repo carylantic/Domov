@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Domov/static/css/main.7635a71f.css",
+    "main.js": "/Domov/static/js/main.b7a9f1ad.js",
+    "static/media/dff.png": "/Domov/static/media/dff.d908d01c844b5b4614dd.png",
+    "index.html": "/Domov/index.html",
+    "main.7635a71f.css.map": "/Domov/static/css/main.7635a71f.css.map",
+    "main.b7a9f1ad.js.map": "/Domov/static/js/main.b7a9f1ad.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7635a71f.css",
+    "static/js/main.b7a9f1ad.js"
+  ]
+}
