@@ -1,0 +1,266 @@
+/* ================= LAYOUT ================= */
+.sp-start-project {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sp-floating-lines {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.sp-start-project-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================= GLASS PANEL ================= */
+.sp-glass-panel {
+  width: 100%;
+  max-width: 960px;
+  padding: 2.6rem 2.8rem;
+  border-radius: 22px;
+  background: rgba(18, 18, 28, 0.55);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 0 40px rgba(192, 132, 252, 0.08),
+    0 40px 120px rgba(0, 0, 0, 0.55);
+}
+
+/* ================= STEP 2 – ZMENŠENIE ================= */
+.sp-step-form .sp-glass-panel {
+  max-width: 600px; /* upravené na rozumnú hodnotu */
+  padding: 2rem 2rem;
+}
+
+.sp-step-hint {
+  max-width: 520px;
+  margin-bottom: 1.8rem;
+  text-align: center;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.75);
+}
+
+/* ================= TITLE ================= */
+.sp-panel-title {
+  text-align: center;
+  font-size: 2.1rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin-bottom: 2.6rem;
+}
+
+/* ================= STEP 1 – TILES ================= */
+.sp-tiles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
+
+.sp-tile {
+  border-radius: 18px;
+  padding: 1.6rem 1.2rem;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.sp-tile:hover {
+  border-color: rgba(192,132,252,0.45);
+  box-shadow: 0 0 18px rgba(192,132,252,0.18);
+  transform: translateY(-3px);
+}
+
+.sp-tile.selected {
+  border-color: rgba(192,132,252,0.75);
+  box-shadow: 0 0 20px rgba(192,132,252,0.28);
+}
+
+.sp-tile-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin-bottom: 0.9rem;
+  background: linear-gradient(135deg, #c084fc, #f472b6);
+  color: #050505;
+}
+
+.sp-tile-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.sp-tile-text {
+  font-size: 0.95rem;
+  color: #fff;
+}
+
+/* ================= STEP 2 – FORM ================= */
+.sp-step-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sp-form-wrapper {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sp-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.sp-form-input,
+.sp-form-textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.07);
+  color: #fff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.sp-form-input::placeholder,
+.sp-form-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.sp-form-input:focus,
+.sp-form-textarea:focus {
+  border-color: #c084fc;
+  box-shadow: 0 0 8px rgba(192, 132, 252, 0.45);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.sp-form-textarea {
+  min-height: 130px;
+  resize: none;
+}
+
+/* ================= FILE UPLOAD ================= */
+.sp-file-drop {
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  border: 1px dashed rgba(255,255,255,0.35);
+  text-align: center;
+  cursor: pointer;
+  color: rgba(255,255,255,0.9);
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.sp-file-drop:hover {
+  border-color: rgba(192,132,252,0.75);
+  background: rgba(192,132,252,0.1);
+}
+
+/* ================= FOOTER ================= */
+.sp-panel-footer {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sp-next-btn,
+.sp-back-btn {
+  border-radius: 999px;
+  padding: 0.85rem 2.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
+}
+
+.sp-next-btn {
+  background: #fff;
+  color: #050505;
+  border: none;
+}
+
+.sp-next-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.sp-next-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.sp-back-btn {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.35);
+}
+
+.sp-back-btn:hover {
+  border-color: rgba(192,132,252,0.6);
+}
+
+/* ================= THANK YOU ================= */
+.sp-thank-you {
+  text-align: center;
+  color: #fff;
+}
+
+.sp-thank-you h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.sp-thank-you p {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 2rem;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .sp-glass-panel {
+    padding: 2rem 1.6rem;
+    margin-top: 60px; /* 👈 jemný posun dole */
+  }
+
+  .sp-step-form .sp-glass-panel {
+    padding: 1.5rem 1.5rem;
+  }
+
+  .sp-panel-title {
+    font-size: 1.8rem;
+  }
+
+  .sp-tiles {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.9rem;
+  }
+
+  .sp-form-grid {
+    grid-template-columns: 1fr;
+  }
+}

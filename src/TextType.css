@@ -1,0 +1,30 @@
+.text-type {
+  max-width: 90vw;
+  font-size: 3rem;
+  font-weight: 750;
+  color: rgb(242, 240, 240);
+  text-align: center;
+  margin-top: 140px;
+  white-space: nowrap; /* zakáže zalamovanie textu */
+    font-family: 'Inter Tight', 'Inter', system-ui, sans-serif;
+}
+
+
+
+.text-type__cursor {
+  margin-left: 0.25rem;
+  display: inline-block;
+  animation: blink 0.9s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+@media (max-width: 768px) {
+  .text-type {
+    white-space: normal;
+    min-height: 2.6em; /* podľa najdlhšej vety */
+    font-size: clamp(1.8rem, 7vw, 2.6rem);
+  }
+}
