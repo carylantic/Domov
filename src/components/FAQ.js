@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const FAQ = () => {
   return (
     <section className="faq-section">
-      <h1>Frequently Asked <span className="custom-gradient-text">Questions</span></h1>
+      <h1>Často kladené <span className="custom-gradient-text">Otázky</span></h1>
 
       <div className="faq-container">
         {/* Q1 */}
@@ -14,11 +14,11 @@ const FAQ = () => {
           Koľko u vás stojí tvorba webovej stránky? <span className="chevron">▾</span>
         </label>
         <div className="answer">
-          <p>
-            Cena je individuálna a závisí od <strong>rozsahu projektu</strong>.
-            Pre presnú cenovú ponuku mi stačí napísať vašu predstavu a
-            <strong>obratom vám vypracujem odhad na mieru</strong>.
-          </p>
+         <p>
+  Cena je individuálna a závisí od <strong>rozsahu projektu</strong>. 
+  Pre presnú cenovú ponuku mi stačí napísať vašu predstavu a <strong>obratom vám vypracujem odhad na mieru</strong>.
+</p>
+
         </div>
 
         {/* Q2 */}
