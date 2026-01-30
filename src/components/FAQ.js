@@ -14,7 +14,7 @@ const FAQ = () => {
           Koľko u vás stojí tvorba webovej stránky? <span className="chevron">▾</span>
         </label>
         <div className="answer">
-         <p>
+           <p>
   Cena je individuálna a závisí od <strong>rozsahu projektu</strong>. 
   Pre presnú cenovú ponuku mi stačí napísať vašu predstavu a <strong>obratom vám vypracujem odhad na mieru</strong>.
 </p>
